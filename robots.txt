@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jianwang1123.github.io/mathbiojw/sitemap.xml
+Sitemap: /mathbiojw/sitemap.xml
