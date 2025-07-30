@@ -1,32 +1,49 @@
-name: Deploy al-folio via Jekyll
+name: Deploy
 
 on:
   push:
-    branches:
-      - main  # 或 master，看你仓库实际分支
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  build-deploy:
+  deploy:
+    # if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - name: Checkout 🛎️
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1
-          bundler-cache: true
+    - name: Setup Ruby 💎
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
 
-      - name: Install Dependencies
-        run: bundle install
+    - name: Update _config.yml ⚙️
+      uses: fjogeleit/yaml-update-action@main
+      with:
+        valueFile: '_config.yml'
+        propertyPath: 'giscus.repo'
+        value: ${{ github.repository }}
+        commitChange: false
 
-      - name: Build site
-        run: bundle exec jekyll build
+    - name: Install and Build 🔧
+      run: |
+        bundle install
+        bundle exec jekyll build --lsi
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+    - name: Deploy 🚀
+      if: github.event_name != 'pull_request'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
