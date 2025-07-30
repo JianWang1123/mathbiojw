@@ -1,28 +1,28 @@
-name: Build and Deploy Jekyll site
+name: Deploy al-folio via Jekyll
 
 on:
   push:
     branches:
-      - main  # 如果你是 master 就改成 master
+      - main  # 或 master，看你仓库实际分支
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: 3.1
           bundler-cache: true
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: bundle install
 
-      - name: Build the site
+      - name: Build site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
