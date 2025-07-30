@@ -1,28 +1,28 @@
-name: Build and Deploy Jekyll Site
+name: Build and Deploy Jekyll site
 
 on:
   push:
     branches:
-      - main  # 如果你的分支是 master，请改成 master
+      - main  # 如果你是 master 就改成 master
 
 jobs:
-  jekyll:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Ruby 3.1 和 Jekyll 兼容，建议不改
+          ruby-version: '3.1'
           bundler-cache: true
 
       - name: Install dependencies
         run: bundle install
 
-      - name: Build site with Jekyll
+      - name: Build the site
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
