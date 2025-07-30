@@ -6,7 +6,7 @@ subtitle: <a href='#'>KU Leuven</a>, Ghent, Belgium.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: JWprofile.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
