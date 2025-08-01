@@ -6,7 +6,7 @@ subtitle: A collaborator of individual microbes, [KU Leuven](https://cit.kuleuve
 
 profile:
   align: right
-  image: JWprofile.jpg
+  image: Jwprofile1.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Gebroeders De Smetstraat 1</p>
