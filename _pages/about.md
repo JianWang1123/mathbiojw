@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: A collaborator of individual microbes, [KU Leuven](https://cit.kuleuven.be/biotec/Team)
+subtitle: A collaborator of individual microbes <a href='https://cit.kuleuven.be/biotec/Team'>KU Leuven</a>
 
 profile:
   align: right
