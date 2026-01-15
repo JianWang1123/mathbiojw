@@ -1,0 +1,169 @@
+===============================================================================
+在您的本地电脑上获取模型和图片 - 详细步骤
+===============================================================================
+
+📌 重要说明：
+现在代码和图片在GitHub服务器上，您需要拉取到本地才能看到。
+
+===============================================================================
+方法1：拉取包含图片的完整代码（最快）
+===============================================================================
+
+打开命令行（终端/Git Bash），然后：
+
+第1步：进入您的项目目录
+------------------------
+cd /path/to/your/mathbiojw
+# ⚠️ 请改成您本地实际的路径，例如：
+# Windows: cd C:\Users\您的用户名\Documents\mathbiojw
+# Mac/Linux: cd ~/Documents/mathbiojw
+
+第2步：拉取最新代码
+-------------------
+git fetch origin
+git checkout claude/three-strategist-model-hs4rK
+git pull origin claude/three-strategist-model-hs4rK
+
+第3步：查看图片
+---------------
+cd models/three_species_crossfeeding/figures
+ls -lh    # 查看图片列表
+
+# 打开图片（选择您的系统对应的命令）
+# Windows: start quick_start_timeseries.png
+# Mac: open quick_start_timeseries.png
+# Linux: xdg-open quick_start_timeseries.png
+
+完成！现在图片就在您本地了。
+
+===============================================================================
+方法2：在本地重新生成图片（推荐 - 可以自己修改参数）
+===============================================================================
+
+打开命令行（终端/Git Bash），然后：
+
+第1步：拉取代码（不含图片）
+---------------------------
+cd /path/to/your/mathbiojw
+git fetch origin
+git checkout claude/three-strategist-model-hs4rK
+git pull origin claude/three-strategist-model-hs4rK
+
+第2步：进入模型目录
+-------------------
+cd models/three_species_crossfeeding
+
+第3步：安装Python依赖（仅第一次需要）
+--------------------------------------
+pip install numpy scipy matplotlib seaborn
+
+# 如果提示权限问题，使用：
+pip install --user numpy scipy matplotlib seaborn
+
+第4步：运行脚本生成图片
+-----------------------
+python3 quick_start.py
+
+# 或者使用 python（如果python3命令不存在）
+python quick_start.py
+
+# 生成更多示例图片：
+python3 交互式示例.py
+
+第5步：查看生成的图片
+---------------------
+cd figures
+ls -lh    # 查看图片列表
+
+# 打开图片
+start quick_start_timeseries.png    # Windows
+open quick_start_timeseries.png     # Mac
+xdg-open quick_start_timeseries.png # Linux
+
+完成！图片已经生成在本地。
+
+===============================================================================
+📁 图片位置
+===============================================================================
+
+本地完整路径示例：
+
+Windows:
+C:\Users\您的用户名\Documents\mathbiojw\models\three_species_crossfeeding\figures\
+
+Mac:
+/Users/您的用户名/Documents/mathbiojw/models/three_species_crossfeeding/figures/
+
+Linux:
+/home/您的用户名/mathbiojw/models/three_species_crossfeeding/figures/
+
+===============================================================================
+🎯 最简单的方法（一键运行）
+===============================================================================
+
+如果您已经拉取了代码，直接运行：
+
+# 在 mathbiojw 目录下
+cd models/three_species_crossfeeding
+python3 quick_start.py
+
+几秒钟后，figures/ 文件夹会自动创建并包含图片！
+
+===============================================================================
+✅ 检查是否成功
+===============================================================================
+
+运行以下命令检查：
+
+cd models/three_species_crossfeeding/figures
+ls -lh
+
+您应该看到：
+- quick_start_timeseries.png (74 KB)
+- quick_start_omega_comparison.png (64 KB)
+
+如果运行了 交互式示例.py，还会有：
+- example1_basic.png (57 KB)
+- example2_omega_scan.png (68 KB)
+- example3_cooperation.png (60 KB)
+- example4_initial_conditions.png (122 KB)
+
+===============================================================================
+❓ 常见问题
+===============================================================================
+
+Q1: 我不知道我的项目路径在哪里
+A1: 打开命令行，运行：
+    pwd    (Mac/Linux)
+    cd     (Windows)
+    然后找到 mathbiojw 文件夹
+
+Q2: git checkout 失败
+A2: 先确保在正确的仓库里：
+    cd /path/to/mathbiojw
+    git status
+    如果显示 "not a git repository"，说明路径不对
+
+Q3: 没有 python3 命令
+A3: 尝试用 python 代替：
+    python quick_start.py
+
+Q4: pip 安装失败
+A4: 使用 --user 参数：
+    pip install --user numpy scipy matplotlib seaborn
+
+Q5: 图片文件夹还是空的
+A5: 运行脚本后才会生成图片：
+    python3 quick_start.py
+
+===============================================================================
+📞 需要帮助？
+===============================================================================
+
+如果遇到问题，请检查：
+1. 是否在正确的目录（mathbiojw/models/three_species_crossfeeding）
+2. 是否安装了Python（python3 --version）
+3. 是否安装了依赖包（pip list | grep numpy）
+4. 是否成功拉取了最新代码（git status）
+
+===============================================================================
