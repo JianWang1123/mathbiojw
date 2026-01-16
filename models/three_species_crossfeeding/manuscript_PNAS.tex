@@ -43,6 +43,8 @@ Our analysis yields three major advances. First, we derive explicit formulas for
 
 \subsection*{Obligate mutualism establishes a stable two-species platform}
 
+\textbf{Key Finding:} \textit{Obligate cross-feeding creates quantitative thresholds that constrain synthetic syntrophy and predict natural methanogenic partnerships.}
+
 We begin by analyzing the foundational two-species subsystem comprising substrate specialists (S) and metabolite specialists (M). The scaled dynamics are:
 \begin{align}
 \frac{ds}{dt} &= r_S s(1 + \sigma_{SM} m - s) \label{eq:SM1}\\
@@ -55,6 +57,8 @@ Analytical solution of the equilibrium conditions reveals a unique coexistence s
 The biological interpretation is profound. Natural obligate syntrophies—from methanogens requiring hydrogen-producing fermenters \cite{schink2002syntrophic,stams2006electron} to auxotrophic bacterial pairs exchanging amino acids \cite{d2008auxotroph,pande2015fitness}—must satisfy these quantitative thresholds. The parameter $\sigma_{MS} > 1$ represents a minimum cross-feeding flux, experimentally tunable through nutrient availability or genetic manipulation of secretion pathways \cite{mee2014syntrophic,harcombe2014metabolic}. The stability bound $\sigma_{MS}\sigma_{SM} < 1$ predicts an upper limit to reciprocal benefit, beyond which oscillations or extinction occur. Empirical measurements in engineered yeast pairs \cite{shou2007synthetic} and bacterial consortia \cite{hoek2016resource} support such boundaries, though systematic mapping across parameter space remains experimentally challenging. Our analytical solution provides testable predictions: varying inducer concentrations controlling cross-feeding gene expression should map a phase diagram matching our stability criteria.
 
 \subsection*{Generalist invasion requires intermediate metabolic strategies}
+
+\textbf{Key Finding:} \textit{Metabolic flexibility becomes advantageous only at intermediate pathway allocation—extreme specialists exclude generalists, resolving the paradox of specialist-generalist coexistence in cross-feeding communities.}
 
 The generalist (G) can utilize both substrate and metabolite pathways, with relative investment controlled by parameter $\omega \in [0,1]$. At $\omega = 0$, G behaves identically to M (pure metabolite specialist); at $\omega = 1$, G resembles S (pure substrate specialist); intermediate values represent true generalism. This generates net interactions:
 \begin{align}
@@ -75,6 +79,8 @@ The ecological significance extends beyond mathematical elegance. Metabolic flex
 
 \subsection*{Parameter space architecture governs assembly outcomes}
 
+\textbf{Key Finding:} \textit{Curved invasion boundaries reveal nonlinear coupling between mutualistic strength and metabolic strategy, creating predictable fragile zones where communities are sensitive to nutrient perturbations versus robust regions buffered against environmental change.}
+
 To understand community assembly more broadly, we systematically mapped invasion boundaries across two-dimensional parameter spaces (Fig.~2). Panel A displays the invasion rate $\lambda_G$ across the $(\omega, \sigma_{MS})$ plane. The zero-contour (thick black line) partitions parameter space into exclusion (red, $\lambda_G < 0$) and invasion (green, $\lambda_G > 0$) regions. Strikingly, the boundary is neither linear nor parallel to axes, instead exhibiting curvature that reflects nonlinear coupling between pathway strategy and mutualistic strength.
 
 Several critical features emerge. First, at low $\sigma_{MS}$ (weak S-to-M benefit), generalist invasion requires higher $\omega$—stronger substrate specialization compensates for weak mutualistic support. Conversely, strong mutualism ($\sigma_{MS} > 2$) permits generalist establishment even at low $\omega$, suggesting highly mutualistic platforms readily accommodate diverse metabolic strategies. Second, the invasion boundary asymptotically approaches $\omega \approx 0.3$ as $\sigma_{MS} \to \infty$, indicating an intrinsic minimum substrate utilization necessary for generalist viability regardless of mutualistic context. Third, the gradient magnitude varies across parameter space: shallow gradients near the boundary imply high sensitivity to perturbations, whereas steep regions confer robustness.
@@ -88,6 +94,8 @@ Panel D examines the $(\omega, \sigma_{SM})$ plane holding $\sigma_{MS}$ fixed, 
 Panel E explores cooperation-competition balance in S-G interactions. The zero-invasion contour curves through $(\sigma_{GS}, \alpha_{GS})$ space, crossing the diagonal where cooperation equals competition. Generalist invasion requires cooperative benefits exceeding competitive costs, but the threshold is not simply $\sigma_{GS} > \alpha_{GS}$. Instead, M-mediated effects (the $e m^*_{SM}$ term) shift the boundary, illustrating how three-species interactions are irreducible to pairwise sums. This invalidates simplistic "net interaction" heuristics: predicting invasion demands accounting for all species' influences mediated through equilibrium community structure.
 
 \subsection*{Transcritical bifurcations mediate community assembly}
+
+\textbf{Key Finding:} \textit{Sharp community transitions at critical thresholds—structurally stable transcritical bifurcations—enable quantitative prediction of composition changes in response to metabolic perturbations, analogous to ecosystem tipping points but mathematically tractable.}
 
 Systematically varying $\omega$ from 0 to 1 traces a continuous trajectory through parameter space, revealing the bifurcation structure underlying community transitions. Below $\omega_{crit}$, the S-M equilibrium is stable and attracts all trajectories; generalists, if introduced, decline to extinction. At $\omega = \omega_{crit}$, a transcritical bifurcation occurs: the S-M equilibrium loses stability along the generalist direction, and an interior equilibrium (three-species coexistence) emerges from the boundary. For $\omega > \omega_{crit}$, the interior equilibrium is stable, and generalists persist. This smooth exchange of stability—characteristic of transcritical bifurcations—contrasts with saddle-node bifurcations (where equilibria appear or disappear discontinuously) or Hopf bifurcations (generating oscillations).
 
