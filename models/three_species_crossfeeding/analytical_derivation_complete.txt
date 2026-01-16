@@ -1,0 +1,43 @@
+================================================================================
+完整解析推导报告
+Complete Analytical Derivation Report
+================================================================================
+
+
+================================================================================
+1. 平衡点 E_SM: S-M 共存
+================================================================================
+
+N_S* = \frac{K_{S} \left(\sigma_{SM} - 1\right)}{\sigma_{MS} \sigma_{SM} - 1}
+
+N_M* = \frac{K_{M} \left(1 - \sigma_{MS}\right)}{\sigma_{MS} \sigma_{SM} - 1}
+
+存在条件: σ_MS > 1 AND σ_MS·σ_SM > 1
+
+================================================================================
+2. 平衡点 E_SG: S-G 共存
+================================================================================
+
+N_S* = \frac{K_{S} \left(2 \alpha_{SG} \omega^{2} - \alpha_{SG} \omega + 2 \omega^{2} \sigma_{SG} - 3 \omega \sigma_{SG} + \sigma_{SG} - 1\right)}{\alpha_{GS} \alpha_{SG} \omega^{2} + \alpha_{GS} \omega^{2} \sigma_{SG} - \alpha_{GS} \omega \sigma_{SG} + \alpha_{SG} \omega^{2} \sigma_{GS} - \alpha_{SG} \omega \sigma_{GS} + \omega^{2} \sigma_{GS} \sigma_{SG} - 2 \omega \sigma_{GS} \sigma_{SG} + \sigma_{GS} \sigma_{SG} - 1}
+
+N_G* = \frac{K_{G} \left(\alpha_{GS} \omega + \omega \sigma_{GS} - 2 \omega - \sigma_{GS} + 1\right)}{\alpha_{GS} \alpha_{SG} \omega^{2} + \alpha_{GS} \omega^{2} \sigma_{SG} - \alpha_{GS} \omega \sigma_{SG} + \alpha_{SG} \omega^{2} \sigma_{GS} - \alpha_{SG} \omega \sigma_{GS} + \omega^{2} \sigma_{GS} \sigma_{SG} - 2 \omega \sigma_{GS} \sigma_{SG} + \sigma_{GS} \sigma_{SG} - 1}
+
+存在条件: Complex (depends on ω and σ, α parameters)
+
+================================================================================
+3. E_SM 稳定性
+================================================================================
+
+G入侵率: \frac{r_{G} \left(- \omega \left(\alpha_{GS} \left(\sigma_{SM} - 1\right) + \sigma_{GM} \left(\sigma_{MS} - 1\right) - \sigma_{MS} \sigma_{SM} + 1\right) + \left(\omega - 1\right) \left(- \alpha_{GM} \left(\sigma_{MS} - 1\right) - \sigma_{GS} \left(\sigma_{SM} - 1\right) + \sigma_{MS} \sigma_{SM} - 1\right)\right)}{\sigma_{MS} \sigma_{SM} - 1}
+
+Trace: \frac{- r_{G} \left(\omega \left(\alpha_{GS} \left(\sigma_{SM} - 1\right) + \sigma_{GM} \left(\sigma_{MS} - 1\right) - \sigma_{MS} \sigma_{SM} + 1\right) + \left(\omega - 1\right) \left(\alpha_{GM} \left(\sigma_{MS} - 1\right) + \sigma_{GS} \left(\sigma_{SM} - 1\right) - \sigma_{MS} \sigma_{SM} + 1\right)\right) + r_{M} \left(\sigma_{MS} - 1\right) - r_{S} \left(\sigma_{SM} - 1\right)}{\sigma_{MS} \sigma_{SM} - 1}
+
+Det: \frac{r_{G} r_{M} r_{S} \left(- \alpha_{GM} \omega \sigma_{MS}^{2} \sigma_{SM} + \alpha_{GM} \omega \sigma_{MS}^{2} + 2 \alpha_{GM} \omega \sigma_{MS} \sigma_{SM} - 2 \alpha_{GM} \omega \sigma_{MS} - \alpha_{GM} \omega \sigma_{SM} + \alpha_{GM} \omega + \alpha_{GM} \sigma_{MS}^{2} \sigma_{SM} - \alpha_{GM} \sigma_{MS}^{2} - 2 \alpha_{GM} \sigma_{MS} \sigma_{SM} + 2 \alpha_{GM} \sigma_{MS} + \alpha_{GM} \sigma_{SM} - \alpha_{GM} - \alpha_{GS} \omega \sigma_{MS} \sigma_{SM}^{2} + 2 \alpha_{GS} \omega \sigma_{MS} \sigma_{SM} - \alpha_{GS} \omega \sigma_{MS} + \alpha_{GS} \omega \sigma_{SM}^{2} - 2 \alpha_{GS} \omega \sigma_{SM} + \alpha_{GS} \omega - \omega \sigma_{GM} \sigma_{MS}^{2} \sigma_{SM} + \omega \sigma_{GM} \sigma_{MS}^{2} + 2 \omega \sigma_{GM} \sigma_{MS} \sigma_{SM} - 2 \omega \sigma_{GM} \sigma_{MS} - \omega \sigma_{GM} \sigma_{SM} + \omega \sigma_{GM} - \omega \sigma_{GS} \sigma_{MS} \sigma_{SM}^{2} + 2 \omega \sigma_{GS} \sigma_{MS} \sigma_{SM} - \omega \sigma_{GS} \sigma_{MS} + \omega \sigma_{GS} \sigma_{SM}^{2} - 2 \omega \sigma_{GS} \sigma_{SM} + \omega \sigma_{GS} + 2 \omega \sigma_{MS}^{2} \sigma_{SM}^{2} - 2 \omega \sigma_{MS}^{2} \sigma_{SM} - 2 \omega \sigma_{MS} \sigma_{SM}^{2} + 2 \omega \sigma_{MS} + 2 \omega \sigma_{SM} - 2 \omega + \sigma_{GS} \sigma_{MS} \sigma_{SM}^{2} - 2 \sigma_{GS} \sigma_{MS} \sigma_{SM} + \sigma_{GS} \sigma_{MS} - \sigma_{GS} \sigma_{SM}^{2} + 2 \sigma_{GS} \sigma_{SM} - \sigma_{GS} - \sigma_{MS}^{2} \sigma_{SM}^{2} + \sigma_{MS}^{2} \sigma_{SM} + \sigma_{MS} \sigma_{SM}^{2} - \sigma_{MS} - \sigma_{SM} + 1\right)}{\sigma_{MS}^{2} \sigma_{SM}^{2} - 2 \sigma_{MS} \sigma_{SM} + 1}
+
+================================================================================
+4. E_SG 稳定性
+================================================================================
+
+M入侵率: \frac{r_{M} \left(- \alpha_{GS} \alpha_{SG} \omega^{2} - \alpha_{GS} \omega^{2} \sigma_{SG} + \alpha_{GS} \omega \sigma_{SG} + \alpha_{MG} \left(\omega - 1\right) \left(\alpha_{GS} \omega + \omega \sigma_{GS} - 2 \omega - \sigma_{GS} + 1\right) - \alpha_{SG} \omega^{2} \sigma_{GS} + \alpha_{SG} \omega \sigma_{GS} - \omega^{2} \sigma_{GS} \sigma_{SG} + 2 \omega \sigma_{GS} \sigma_{SG} + \omega \sigma_{MG} \left(\alpha_{GS} \omega + \omega \sigma_{GS} - 2 \omega - \sigma_{GS} + 1\right) - \sigma_{GS} \sigma_{SG} + \sigma_{MS} \left(2 \alpha_{SG} \omega^{2} - \alpha_{SG} \omega + 2 \omega^{2} \sigma_{SG} - 3 \omega \sigma_{SG} + \sigma_{SG} - 1\right) + 1\right)}{\alpha_{GS} \alpha_{SG} \omega^{2} + \alpha_{GS} \omega^{2} \sigma_{SG} - \alpha_{GS} \omega \sigma_{SG} + \alpha_{SG} \omega^{2} \sigma_{GS} - \alpha_{SG} \omega \sigma_{GS} + \omega^{2} \sigma_{GS} \sigma_{SG} - 2 \omega \sigma_{GS} \sigma_{SG} + \sigma_{GS} \sigma_{SG} - 1}
+
+Trace: \frac{\alpha_{GS} \alpha_{MG} \omega^{2} r_{M} - \alpha_{GS} \alpha_{MG} \omega r_{M} - \alpha_{GS} \alpha_{SG} \omega^{2} r_{M} + \alpha_{GS} \omega^{2} r_{M} \sigma_{MG} - \alpha_{GS} \omega^{2} r_{M} \sigma_{SG} - \alpha_{GS} \omega r_{G} + \alpha_{GS} \omega r_{M} \sigma_{SG} + \alpha_{MG} \omega^{2} r_{M} \sigma_{GS} - 2 \alpha_{MG} \omega^{2} r_{M} - 2 \alpha_{MG} \omega r_{M} \sigma_{GS} + 3 \alpha_{MG} \omega r_{M} + \alpha_{MG} r_{M} \sigma_{GS} - \alpha_{MG} r_{M} - \alpha_{SG} \omega^{2} r_{M} \sigma_{GS} + 2 \alpha_{SG} \omega^{2} r_{M} \sigma_{MS} - 2 \alpha_{SG} \omega^{2} r_{S} + \alpha_{SG} \omega r_{M} \sigma_{GS} - \alpha_{SG} \omega r_{M} \sigma_{MS} + \alpha_{SG} \omega r_{S} + \omega^{2} r_{M} \sigma_{GS} \sigma_{MG} - \omega^{2} r_{M} \sigma_{GS} \sigma_{SG} - 2 \omega^{2} r_{M} \sigma_{MG} + 2 \omega^{2} r_{M} \sigma_{MS} \sigma_{SG} - 2 \omega^{2} r_{S} \sigma_{SG} - \omega r_{G} \sigma_{GS} + 2 \omega r_{G} - \omega r_{M} \sigma_{GS} \sigma_{MG} + 2 \omega r_{M} \sigma_{GS} \sigma_{SG} + \omega r_{M} \sigma_{MG} - 3 \omega r_{M} \sigma_{MS} \sigma_{SG} + 3 \omega r_{S} \sigma_{SG} + r_{G} \sigma_{GS} - r_{G} - r_{M} \sigma_{GS} \sigma_{SG} + r_{M} \sigma_{MS} \sigma_{SG} - r_{M} \sigma_{MS} + r_{M} - r_{S} \sigma_{SG} + r_{S}}{\alpha_{GS} \alpha_{SG} \omega^{2} + \alpha_{GS} \omega^{2} \sigma_{SG} - \alpha_{GS} \omega \sigma_{SG} + \alpha_{SG} \omega^{2} \sigma_{GS} - \alpha_{SG} \omega \sigma_{GS} + \omega^{2} \sigma_{GS} \sigma_{SG} - 2 \omega \sigma_{GS} \sigma_{SG} + \sigma_{GS} \sigma_{SG} - 1}
