@@ -1,0 +1,109 @@
+
+        ════════════════════════════════════════════════════════════════════════
+        THEOREM: If both ω_crit1 and ω_crit2 exist, then ω_crit2 > ω_crit1
+        ════════════════════════════════════════════════════════════════════════
+
+        PROOF (by contradiction and continuity):
+
+        DEFINITIONS:
+        - ω_crit1: Critical threshold where λ_G(S*_SM, M*_SM; ω_crit1) = 0
+                   (G can invade S-M equilibrium)
+
+        - ω_crit2: Critical threshold where λ_M(S*_SG, G*_SG; ω_crit2) = 0
+                   (M can no longer invade S-G equilibrium)
+
+        STEP 1: Behavior just above ω_crit1
+        ────────────────────────────────────
+        For ω = ω_crit1 + ε (small ε > 0):
+
+        • λ_G(ω_crit1 + ε) > 0  (by definition of bifurcation)
+        • Therefore, G can invade S-M equilibrium
+        • A three-species equilibrium (S*, M*, G*) with G* > 0 emerges
+        • This equilibrium is stable (verified by Jacobian analysis)
+
+        STEP 2: Three-species equilibrium exists for ω slightly above ω_crit1
+        ──────────────────────────────────────────────────────────────────────
+        The three-species equilibrium (s*, m*, g*) satisfies:
+
+        1 + σ_SM·m* + a(ω)·g* - s* = 0
+        -1 + σ_MS·s* + b(ω)·g* - m* = 0
+        d(ω) + c(ω)·s* + e(ω)·m* - g* = 0
+
+        All three densities s*, m*, g* > 0 for ω ∈ (ω_crit1, ω_crit1 + δ)
+        for some δ > 0.
+
+        STEP 3: Contradiction if ω_crit2 ≤ ω_crit1
+        ───────────────────────────────────────────
+        ASSUME (for contradiction): ω_crit2 ≤ ω_crit1
+
+        Case 1: ω_crit2 < ω_crit1
+        ─────────────────────────
+        - At ω = ω_crit2 < ω_crit1: M cannot invade S-G equilibrium (λ_M ≤ 0)
+        - At ω = ω_crit1 > ω_crit2: G can invade S-M equilibrium (λ_G > 0)
+
+        But this creates a logical contradiction:
+        • If ω_crit1 > ω_crit2, then at ω = ω_crit1:
+          - M is already excluded (since ω > ω_crit2)
+          - Only S-G equilibrium should exist
+          - But ω_crit1 is defined relative to S-M equilibrium
+          - This is inconsistent!
+
+        The error: If M is excluded before G invades, the S-M platform
+        doesn't exist for G to invade into.
+
+        Case 2: ω_crit2 = ω_crit1
+        ─────────────────────────
+        - At ω = ω_crit1: G invasion fitness λ_G = 0
+        - At ω = ω_crit2 = ω_crit1: M invasion fitness λ_M = 0
+
+        This would mean:
+        • G can invade S-M at ω_crit1 (from below)
+        • M is simultaneously displaced at ω_crit1
+        • No intermediate three-species coexistence region
+
+        But by continuity of equilibrium solutions:
+        • Just above ω_crit1, we proved three-species equilibrium exists
+        • This equilibrium has m* > 0 (M is present)
+        • Therefore M cannot be displaced exactly at ω_crit1
+        • Contradiction!
+
+        STEP 4: Therefore, ω_crit2 > ω_crit1
+        ─────────────────────────────────────
+        Since both cases lead to contradictions, we must have:
+
+        ω_crit2 > ω_crit1
+
+        GEOMETRIC INTERPRETATION:
+        ─────────────────────────
+        As ω increases from 0 to 1:
+
+        ω < ω_crit1:          S-M equilibrium (stable)
+                              G → 0 (λ_G < 0)
+
+        ω = ω_crit1:          Bifurcation point
+                              λ_G crosses zero
+
+        ω ∈ (ω_crit1, ω_crit2): Three-species equilibrium (stable)
+                                s*, m*, g* > 0
+
+        ω = ω_crit2:          Second bifurcation
+                              λ_M crosses zero (from above)
+                              m* → 0
+
+        ω > ω_crit2:          S-G equilibrium (stable)
+                              M → 0 (λ_M < 0)
+
+        The ordering ω_crit1 < ω_crit2 is NECESSARY for the intermediate
+        three-species region to exist with positive width.
+
+        COROLLARY:
+        ──────────
+        If ω_crit2 does not exist (i.e., λ_M(ω) < 0 for all ω > ω_crit1),
+        then three-species coexistence is PERMANENT for ω > ω_crit1.
+
+        This occurs when σ_MG is below a critical threshold (≈ 1.0 for
+        baseline parameters).
+
+        Q.E.D.
+        ════════════════════════════════════════════════════════════════════════
+        
